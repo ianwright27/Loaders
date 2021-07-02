@@ -1,0 +1,76 @@
+*{
+	margin: 0;
+}
+
+body{
+	background: #fffdd0;
+}
+
+.container{
+	position:  relative;
+	width: 600px;
+	height: 400px;
+	border:  1px solid #f9f6b8;
+	margin-left:  auto;
+	margin-right:  auto;
+	top:  20px;
+	background: #fffdd0;
+	box-shadow: -10px -10px 50px 100px rgba(253, 243, 208, 1);
+	border: none;
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.circle-object{
+	float: left;
+}
+
+.bg-green{
+	/*background: #35d124;*/
+	background: #f3f1c4;
+}
+
+.bg-white{
+	background: #fffdd0;
+}
+
+.bg-debug{
+	background: #ddd;
+}
+
+.border-green{
+	/*border: 1px solid #35d124;*/
+	border: 1px solid #f1f1cb;
+}
+
+.border-white{
+	border: 1px solid #fffdd0;
+}
+
+.outer-circle{
+	position: relative;
+	width: 100px;
+	height: 100px;
+	border-radius: 60%;
+	margin-top: 30px;
+	margin-left: 30px;
+}
+
+.inner-circle{
+	position: absolute; 
+	left: 0px; 
+	right: 0; 
+	top: 0;
+	margin-left: auto; 
+	margin-right: auto; 
+	width: 30px;
+	height: 30px;
+	border-radius: 60%;
+}
+
+.Absolute-Center {
+  display: flex; // make us of Flexbox
+  align-items: center; // does vertically center the desired content
+  justify-content: center; // horizontally centers single line items
+  text-align: center; // optional, but helps horizontally center text that breaks into multiple lines
+}  
