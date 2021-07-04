@@ -1,13 +1,40 @@
 
+
+// for many
+
+let outer = $(".outer-circle")
+
+let inner = $(".inner-circle")
+
+
+// for one
+
+// outer = $("#outer1")
+
+// inner = $("#inner1")
+
+
+let enlargeLimit = outer.width() - 2;
+
+let innerWidth = inner.width()
+
+let innerHeight = inner.height()
+
+let framerate = 30;
+
+let timeframe = 1000/framerate;
+
+
+centerInnerCircle()
+
+initialize()
+
+
 function centerInnerCircle(){
-	// let outerWidth = outer.width()
-	// let innerWidth = inner.width()
 
 	let outerHeight = outer.height()
-	let innerHeight = inner.height()
 
-	// // calculate LEFT property
-	// let leftPropValue = (outerWidth - innerWidth)/2
+	let innerHeight = inner.height()
 
 	// calculate TOP property
 	let topPropValue = (outerHeight - innerHeight)/2
@@ -17,13 +44,8 @@ function centerInnerCircle(){
 		'top': topPropValue + 'px'
 	})
 
-	// // center horizontally
-	// inner.css({
-	// 	'left': leftPropValue + 'px'
-	// })
-
-	// console.log(leftPropValue)
 }
+
 
 function enlargenInnerCircle(){
 	// increment width
@@ -40,12 +62,14 @@ function enlargenInnerCircle(){
 	centerInnerCircle();
 }
 
+
 function fitInnerCircle(){
 	inner.css({
 		'top' : '0px',
 		'left': '0px'
 	})
 }
+
 
 function replaceBackground(){
 	let innerbg = inner.css('background-color');
@@ -84,8 +108,6 @@ function replaceBackground(){
 }
 
 
-
-
 function initialize(){
 
 	enlargeInterval = setInterval(function(){
@@ -108,29 +130,3 @@ function initialize(){
 
 }
 
-
-window.addEventListener('load', function(){
-
-  // for one
-  let outer = $("#outer");
-  let inner = $("#inner");
-
-  // for many
-  outer = $(".outer-circle");
-  inner = $(".inner-circle");
-
-  let enlargeLimit = outer.width() - 2;
-
-  let innerWidth = inner.width();
-
-  let innerHeight = inner.height();
-
-  let framerate = 30;
-
-  let timeframe = 1000/framerate;
-
-  centerInnerCircle();
-
-  initialize();
-
-})
